@@ -8,11 +8,16 @@ apiRouter.get("*", (req, res) => {
   res.send(true);
 });
 app.use((req, res, next) => {
-  console.log("Request received" + req.url);
+  console.log("Request received: " + req.url);
   next();
 });
 app.get("/", (req, res) => {
   res.send("Hello World!");
+});
+app.get("/animals", (req, res) => {
+  res.send("Animals");
+});
+app.post("/animals", (req, res) => {
 });
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

@@ -1,7 +1,16 @@
-interface Resource {
+interface election {
+  name: string;
   id: number;
 }
 
-interface Animal extends Resource {
+interface animal {
+  id: number;
   name: string;
+  image: string;
+}
+
+interface vote {
+  id: number;
+  animalId: number;
+  electionId: number;
 }
