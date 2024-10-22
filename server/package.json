@@ -1,0 +1,22 @@
+{
+  "name": "valet-i-skogen-server",
+  "version": "1.0.0",
+  "description": "Ett klientgränssnitt för att rösta...",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build && npm run start",
+    "build": "npx esbuild index.ts --platform=node --packages=external --outdir=./dist",
+    "start": "node ./dist/index.js",
+    "test": "npx esbuild index.ts --platform=node --packages=external --outdir=./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.8",
+    "esbuild": "^0.24.0",
+    "express": "^4.21.1",
+    "expressjs": "^1.0.1"
+  }
+}
